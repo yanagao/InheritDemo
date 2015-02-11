@@ -1,0 +1,8 @@
+// 原型链继承
+function Parent(){} 
+function Child(){} 
+Child.prototype = new Parent(); 
+Child.prototype.constructor = Child; 
+var child = new Child(); 
+alert(child.constructor);     // function Parent(){} 
+alert(child instanceof Child);     // true 
