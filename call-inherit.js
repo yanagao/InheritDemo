@@ -16,5 +16,5 @@ function extendAB() {   // 用extendAB继承baseA和baseB
   baseB.call(this);
 }
 var extend = new extendAB();
-extend.showSelfA();  // baseB member
+extend.showSelfA();  // baseB member 被baseB覆盖
 extend.showSelfB();  // baseB member
