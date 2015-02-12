@@ -1,3 +1,4 @@
+// call继承
 function baseA() {
   this.member = "baseA member";
   this.showSelfA = function() {
@@ -10,10 +11,10 @@ function baseB() {
     alert(this.member);
   }
 }
-function extendAB() {
+function extendAB() {   // 用extendAB继承baseA和baseB
   baseA.call(this);
   baseB.call(this);
 }
 var extend = new extendAB();
-extend.showSelfA();
-extend.showSelfB();
+extend.showSelfA();  // baseB member
+extend.showSelfB();  // baseB member
